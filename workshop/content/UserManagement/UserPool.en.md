@@ -35,7 +35,7 @@ The AWS Amplify CLI will now run through the set up for Amazon Cognito, select t
 ```
 
 Once configuration completes you see the following confirmation:
-![Amplify auth add screenshot](/images/amplify-auth-add.png)
+![Amplify auth add screenshot](/aws-serverless-webapp-workshop/images/amplify-auth-add.png)
 
 {{% notice warning %}}
 Do not run `amplify push` or `amplify publish` - this will create duplicate backend resources. Amplify Console creates the necessary resources when you push your code to your repository.

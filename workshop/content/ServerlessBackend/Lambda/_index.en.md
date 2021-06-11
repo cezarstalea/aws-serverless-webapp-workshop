@@ -14,25 +14,28 @@ AWS Lambda runs your code in response to events such as an HTTP request. In this
 
 #### High-Level Instructions
 
-Use the AWS Lambda console to create a new Lambda function called `RequestUnicorn` that processes API requests. Copy and paste [this example implementation](requestUnicorn.js) into the AWS Lambda console's editor for your function code.
+Use the AWS Lambda console to create a new Lambda function called `%INITIALS%-RequestUnicorn` that processes API requests. Copy and paste [this example implementation](requestUnicorn.js) into the AWS Lambda console's editor for your function code.
 
-Configure your function to use the `WildRydesLambda` IAM role you created in the previous section.
+Configure your function to use the `%INITIALS%-WildRydesLambda` IAM role you created in the previous section.
 
 **:white_check_mark: Step-by-step directions**
 
 1. Go to the [AWS Lambda console][lambda-console]
 1. Click **Create function**.
 1. Keep the default **Author from scratch** card selected.
-1. Enter `RequestUnicorn` in the **Name** field.
+1. Enter `%INITIALS%-RequestUnicorn` in the **Name** field. **:warning:** Remember about your initials prefix!
 1. Select **Node.js 12.x** for the **Runtime**.
-2. Expand *Change default execution role* under **Permissions**.
+1. Expand *Change default execution role* under **Permissions**.
 1. Ensure `Use an existing role` is selected from the **Role** dropdown.
-1. Select `WildRydesLambda` from the **Existing Role** dropdown.
-    ![Create Lambda function screenshot](/images/create-lambda-function.png)
+1. Select `%INITIALS%-WildRydesLambda` from the **Existing Role** dropdown.
+    ![Create Lambda function screenshot](/aws-serverless-webapp-workshop/images/create-lambda-function.png)
 1. Choose **Create function**.
 1. Scroll down to the **Function code** section and replace the existing code in the **index.js** code editor with the contents of [requestUnicorn.js](requestUnicorn.js).
-    ![Create Lambda function screenshot](/images/create-lambda-function-code.png)
-1. Click **Deploy** in the upper right above the code editor.
+    ![Create Lambda function screenshot](/aws-serverless-webapp-workshop/images/create-lambda-function-code.png)
+1. **:warning: Update the code to connect to a prefixed DynamoDB table rather than default non-prefixed!**. In the picture below prefix is for sample user *Jan Nowak* with *jn* as initials.
+    ![Update Lambda DynamoDB call](/aws-serverless-webapp-workshop/images/update-lambda-function-code.png)
+
+1. Click **Deploy** button above the code editor.
 
 #### Implementation Validation
 
@@ -41,7 +44,7 @@ For this module you will test the function that you built using the AWS Lambda c
 **:white_check_mark: Step-by-step directions**
 
 1. From the main edit screen for your function, select **Configure test events** from the the **Select a test event...** dropdown.
-    ![Configure test event](/images/configure-test-event.png)
+    ![Configure test event](/aws-serverless-webapp-workshop/images/configure-test-event.png)
 1. Keep **Create new test event** selected.
 1. Enter `TestRequestEvent` in the **Event name** field
 1. Copy and paste the following test event into the editor:
@@ -66,7 +69,7 @@ For this module you will test the function that you built using the AWS Lambda c
         "body": "{\"PickupLocation\":{\"Latitude\":47.6174755835663,\"Longitude\":-122.28837066650185}}"
     }
     ```
-    ![Configure test event](/images/configure-test-event-2.png)
+    ![Configure test event](/aws-serverless-webapp-workshop/images/configure-test-event-2.png)
 1. Choose **Create**.
 1. On the main function edit screen click **Test** with `TestRequestEvent` selected in the dropdown.   
 1. Scroll to the top of the page and expand the **Details** section of the **Execution result** section.

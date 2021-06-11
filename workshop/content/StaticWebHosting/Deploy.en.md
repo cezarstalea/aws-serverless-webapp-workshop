@@ -24,27 +24,29 @@ Depending on your console and account settings, you may not see the **Get Starte
 Now you need to create a new service role with the permissions to deploy the application backend.  
 
 1. Click on **Create new role**, check that **Amplify** is selected and click **Next permissions**, click **Next: Tags**, click **Next: Review**.  
-1. Give the Role a new name: `wildrydes-backend-role` and click **Create role**.  Close this tab and return to the AWS Amplify Build configure console.
+1. Give the Role a new name: `%INITIALS%-wildrydes-backend-role` with your initials as prefix, and click **Create role**.  Close this tab and return to the AWS Amplify Build configure console.
 
 1. Refresh the role list by clicking on the circular arrow button, and select the role created in the step above.
     
-    ![Amplify Repository configuration](/images/amplifyConsole-setup-new1.png)
+**:warning:** In the picture below prefixes are for sample user *Jan Nowak* with *jn* as initials.
+
+![Amplify Repository configuration](/aws-serverless-webapp-workshop/images/amplifyConsole-setup-new1.png)
 1. Select **Next**
 1. On the **Review** page select **Save and deploy**
     
     This initial build and deploy process may take up to five minutes for Amplify Console to create the neccesary resources and to deploy your code.
     
-    ![Amplify Deployment](/images/amplify-deploy-status.png)
+    ![Amplify Deployment](/aws-serverless-webapp-workshop/images/amplify-deploy-status.png)
 
 Once completed, click the **site image** to launch your Wild Rydes site.
 
-![Wild Rydes homepage screenshot](/images/wildrydes-homepage.png)
+![Wild Rydes homepage screenshot](/aws-serverless-webapp-workshop/images/wildrydes-homepage.png)
 
 {{% notice note %}}
 If you follow the link for **Master** you'll see various pieces of information about your website deployment, including sample renderings on various platforms:
 {{% /notice %}}
 
-![Amplify Client Renderings](/images/amplify-renderings.png)
+![Amplify Client Renderings](/aws-serverless-webapp-workshop/images/amplify-renderings.png)
 
 [amplify-console]: https://aws.amazon.com/amplify/console/
 [amplify-console-console]: https://console.aws.amazon.com/amplify/home
