@@ -31,6 +31,10 @@ Now you need to create a new service role with the permissions to deploy the app
 **:warning:** In the picture below prefixes are for sample user *Jan Nowak* with *jn* as initials.
 
 ![Amplify Repository configuration](/aws-serverless-webapp-workshop/images/amplifyConsole-setup-new1.png)
+
+1. Expand **Advanced Settings**
+1. In the **Live Package Updates** for **Amplify CLI** please specify `4.29.4`
+
 1. Select **Next**
 1. On the **Review** page select **Save and deploy**
     
