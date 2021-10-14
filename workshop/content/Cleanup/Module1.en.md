@@ -22,7 +22,7 @@ Delete the AWS Amplify Console application and optionally the AWS CodeCommit or 
 
 1. Go to the [AWS IAM Console][iam-console]
 1. Select **Roles** from the navigation menu.
-1. Type `wildrydes-backend-role` into the filter box.
+1. Type `%INITIALS%-wildrydes-backend-role` into the filter box.
 1. Select the role you created in module 1.
 1. On the top left, click on the **Delete role** button.
 1. Choose **Yes, Delete** when prompted to confirm.
